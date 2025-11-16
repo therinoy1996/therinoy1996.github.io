@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Oum & Art Wedding</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Fahkwang&display=swap");
+
+      .limelight-regular {
+        font-family: "Limelight", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .fahkwang-regular {
+        font-family: "Fahkwang", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      p {
+        font-family: "Limelight", sans-serif;
+        font-size: 35px;
+        color: #003049;
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .youareinvited {
+        font-family: "Limelight", sans-serif;
+        font-size: 40px;
+        color: #003049;
+        text-align: center;
+      }
+
+      .dresscode {
+        padding: 0px;
+      }
+
+      .dresscodedetail {
+        font-family: "Fahkwang", sans-serif;
+        font-size: 20px;
+        color: #fbcc22;
+        text-align: center;
+        padding: 0px;
+      }
+
+      /* img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+      } */
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Limelight", sans-serif;
+      }
+
+      .countdown {
+        font-family: "Limelight", sans-serif;
+        font-size: 40px;
+        text-align: center;
+      }
+
+      .time-box {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      .time-box span {
+        display: block;
+      }
+
+      .time-box .number {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .time-box .label {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .fullscreen-img {
+        width: 100%;
+        object-fit: cover; /* ให้ภาพเต็มพื้นที่โดยไม่เสียสัดส่วน */
+        object-position: center; /* จัดตำแหน่งตรงกลาง */
+      }
+
+      /* โซนนี้คือกล่องใหญ่ที่แบ่งซ้าย-ขวา */
+      .venue-section {
+        min-height: 10vh; /* สูงเต็มหน้าจอถ้าต้องการ */
+        display: flex;
+        align-items: center; /* จัดให้เนื้อหาอยู่กลางแนวตั้ง */
+        justify-content: center; /* จัดให้ทั้งบล็อกอยู่กลางหน้า */
+        padding: 10px 20px;
+        box-sizing: border-box;
+      }
+
+      .venue-left {
+        flex: 1; /* แบ่งพื้นที่ซ้ายขวาเท่า ๆ กัน */
+        text-align: right;
+        padding-right: 40px;
+        border-right: 2px solid #000; /* เส้นแบ่งตรงกลาง */
+      }
+
+      .venue-right {
+        flex: 1;
+        padding-left: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .venue-name {
+        font-size: 32px;
+        margin-bottom: 30px;
+        white-space: nowrap;
+      }
+
+      .venue-address {
+        font-family: "Fahkwang", sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .map-wrapper {
+        width: 100%;
+        max-width: 450px;
+        aspect-ratio: 16 / 9; /* รักษาสัดส่วนแผนที่ */
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .map-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .gradient-box {
+        width: 300px;
+        height: 150px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #fff7a1, #fbcc22);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        class="fullscreen-img"
+        src="./img/Savethedate_fullHD.png"
+        alt="17 January 2026 - Oum & Art Wedding Invitation"
+      />
+    </div>
+    <div>
+      <p class="youareinvited">You are invited to the wedding of</p>
+      <img
+        class="fullscreen-img"
+        src="./img/bridalandgroomname.png"
+        alt="17 January 2026 - Oum & Art Wedding Invitation"
+      />
+    </div>
+    <div>
+      <p>Saturday, 17 January 2026, at 9:00 AM (UTC+7)</p>
+    </div>
+    <div class="countdown">
+      <div>
+        <div class="time-box">
+          <span id="days" class="number">00</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="time-box">
+          <span id="hours" class="number">00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div class="time-box">
+          <span id="minutes" class="number">00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div class="time-box">
+          <span id="seconds" class="number">00</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
+      <p id="done-text" style="margin-top: 20px"></p>
+    </div>
+
+    <p>Wedding Ceremony Venue</p>
+    <section class="venue-section">
+      <div class="venue-left">
+        <div class="venue-name">T. Kan Chang Korat</div>
+        <div class="venue-address">
+          337 Moo 7, Ban Pho,<br />
+          Mueang, Nakhon Ratchasima
+        </div>
+      </div>
+
+      <div class="venue-right">
+        <div class="map-wrapper">
+          <!-- ใส่ iframe จาก Google Maps ของคุณตรงนี้ -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d963.1357802049196!2d102.18732166955752!3d15.073366199091915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311949cfc4e8795f%3A0x1095589535307ac6!2z4Lit4Li54LmI4LiXLuC4geC4suC4o-C4iuC5iOC4suC4h-C5guC4hOC4o-C4suC4iiDguYLguJTguKLguIrguYjguLLguIfguK3guLjguJfguLHguKI!5e0!3m2!1sen!2sth!4v1763301030650!5m2!1sen!2sth"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <p>Dress Code</p>
+    <p class="dresscodedetail">
+      We kindly invite you to wear yellow — a colour of sunshine,
+      celebration,<br />
+      and heartfelt warmth, perfect for witnessing the beginning of our forever.
+    </p>
+    <img
+      class="fullscreen-img"
+      src="./img/yellow.png"
+      alt="Dress Code: Yellow"
+    />
+
+    <!-- นับถอยหลังด้วย JavaScript -->
+    <script>
+      // 👉 ตั้งวัน-เวลาเป้าหมายที่นี่ (ปี-เดือน-วันTชั่วโมง:นาที:วินาที)
+      const targetDate = new Date("2026-01-17T23:59:59").getTime();
+
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
+      const doneText = document.getElementById("done-text");
+
+      const timer = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        // ถ้าครบกำหนดเวลาแล้ว
+        if (distance <= 0) {
+          clearInterval(timer);
+          daysEl.textContent = "00";
+          hoursEl.textContent = "00";
+          minutesEl.textContent = "00";
+          secondsEl.textContent = "00";
+          doneText.textContent = "The wedding begins now!";
+          return;
+        }
+
+        // คำนวณ วัน ชั่วโมง นาที วินาที
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // ใส่ค่าในหน้าจอ (ถ้าตัวเลขน้อยกว่า 10 ให้ขึ้น 0 ข้างหน้า)
+        daysEl.textContent = String(days).padStart(2, "0");
+        hoursEl.textContent = String(hours).padStart(2, "0");
+        minutesEl.textContent = String(minutes).padStart(2, "0");
+        secondsEl.textContent = String(seconds).padStart(2, "0");
+      }, 1000);
+    </script>
+  </body>
+</html>
