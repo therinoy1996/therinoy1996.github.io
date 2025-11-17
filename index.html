@@ -21,6 +21,13 @@
       font-style: normal;
     }
 
+    h1 {
+      font-family: "Limelight", sans-serif;
+      font-size: 35px;
+      color: #003049;
+      text-align: center;
+    }
+
     p {
       font-family: "Limelight", sans-serif;
       font-size: 35px;
@@ -43,16 +50,11 @@
     .dresscodedetail {
       font-family: "Fahkwang", sans-serif;
       font-size: 20px;
-      color: #fbcc22;
+      color: #e9b809;
       text-align: center;
       padding: 0px;
+      /* text-shadow: 1px 1px 2px #494949; */
     }
-
-    /* img {
-        display: block;
-        width: 100%;
-        object-fit: cover;
-      } */
 
     html,
     body {
@@ -154,10 +156,68 @@
       border: 0;
     }
 
+    /* ========= Schedule section ========= */
+
+    .schedule-section {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    .schedule-heading {
+      margin-bottom: 20px;
+    }
+
+    .schedule-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .schedule-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .schedule-icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+    .schedule-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .schedule-time {
+      font-family: "Limelight", sans-serif;
+      font-size: 20px;
+      color: #003049;
+    }
+
+    .schedule-detail {
+      font-family: "Fahkwang", sans-serif;
+      font-size: 18px;
+      color: #003049;
+    }
+
+
     /* =========================
     Mobile
     ========================= */
     @media (max-width: 500px) {
+      h1 {
+        font-family: "Limelight", sans-serif;
+        font-size: 15px;
+        color: #003049;
+        text-align: center;
+        padding-top: 30px;
+      }
+
       p {
         font-family: "Limelight", sans-serif;
         font-size: 15px;
@@ -176,20 +236,21 @@
       .dresscodedetail {
         font-family: "Fahkwang", sans-serif;
         font-size: 10px;
-        color: #fbcc22;
+        color: #e9b809;
         text-align: center;
         padding: 0px;
+        /* text-shadow: 1px 1px 2px #494949; */
       }
 
       .venue-name {
         font-size: 14px;
-        margin-bottom: 30px;
+        margin-bottom: 5px;
         white-space: nowrap;
       }
 
       .venue-address {
         font-family: "Fahkwang", sans-serif;
-        font-size: 11px;
+        font-size: 10px;
         line-height: 1.6;
       }
 
@@ -200,8 +261,31 @@
       }
 
       .time-box .number {
-        font-size: 2rem;
+        font-size: 1rem;
         font-weight: bold;
+      }
+
+      .schedule-section {
+        margin: 24px auto;
+        padding: 0 16px;
+      }
+
+      .schedule-item {
+        margin-bottom: 12px;
+      }
+
+      .schedule-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+      }
+
+      .schedule-time {
+        font-size: 14px;
+      }
+
+      .schedule-detail {
+        font-size: 12px;
       }
     }
   </style>
@@ -263,13 +347,64 @@
     </div>
   </section>
 
-  <p>Dress Code</p>
-  <p class="dresscodedetail">
-    We kindly invite you to wear yellow — a colour of sunshine,
-    celebration,<br />
-    and heartfelt warmth, perfect for witnessing the beginning of our forever.
-  </p>
-  <img class="fullscreen-img" src="./img/yellow.png" alt="Dress Code: Yellow" />
+  <div>
+    <h1>Dress Code</h1>
+    <p class="dresscodedetail">
+      We kindly invite you to wear yellow — a colour of sunshine,
+      celebration,<br />
+      and heartfelt warmth, perfect for witnessing the beginning of our forever.
+    </p>
+    <img class="fullscreen-img" src="./img/yellow.png" alt="Dress Code: Yellow" />
+  </div>
+
+  <div class="schedule-section">
+    <div class="schedule-heading youareinvited">
+      Order of Events
+    </div>
+
+    <ul class="schedule-list">
+      <li class="schedule-item">
+        <!-- ไอคอน: ใส่รูปของคุณแทน icon1.png -->
+        <img src="./img/timeline/1.png" alt="" class="schedule-icon" />
+        <div class="schedule-text">
+          <div class="schedule-time">09:00 AM</div>
+          <div class="schedule-detail">
+            Khan Maak procession
+          </div>
+        </div>
+      </li>
+
+      <li class="schedule-item">
+        <img src="./img/timeline/2.png" alt="" class="schedule-icon" />
+        <div class="schedule-text">
+          <div class="schedule-time">09:39 AM</div>
+          <div class="schedule-detail">
+            Isan blessing ritual
+          </div>
+        </div>
+      </li>
+
+      <li class="schedule-item">
+        <img src="./img/timeline/3.png" alt="" class="schedule-icon" />
+        <div class="schedule-text">
+          <div class="schedule-time">10:19 AM</div>
+          <div class="schedule-detail">
+            Water blessing ceremony
+          </div>
+        </div>
+      </li>
+
+      <li class="schedule-item">
+        <img src="./img/timeline/4.png" alt="" class="schedule-icon" />
+        <div class="schedule-text">
+          <div class="schedule-time">11:00 AM</div>
+          <div class="schedule-detail">
+            Join us for brunch (Chinese banquet)
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 
   <!-- นับถอยหลังด้วย JavaScript -->
   <script>
