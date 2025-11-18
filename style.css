@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fahkwang&display=swap");
+
+.limelight-regular {
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fahkwang-regular {
+    font-family: "Fahkwang", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Limelight", sans-serif;
+    font-size: 35px;
+    color: #003049;
+    text-align: center;
+    padding-top: 50px;
+}
+
+p {
+    font-family: "Limelight", sans-serif;
+    font-size: 35px;
+    color: #003049;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.youareinvited {
+    font-family: "Limelight", sans-serif;
+    font-size: 40px;
+    color: #003049;
+    text-align: center;
+}
+
+.dresscode {
+    padding: 0px;
+}
+
+.dresscodedetail {
+    font-family: "Fahkwang", sans-serif;
+    font-size: 20px;
+    color: #e9b809;
+    text-align: center;
+    padding: 0px;
+    /* text-shadow: 1px 1px 2px #494949; */
+}
+
+.orderofevents {
+    font-family: "Limelight", sans-serif;
+    font-size: 35px;
+    color: #003049;
+    text-align: center;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Limelight", sans-serif;
+}
+
+.countdown {
+    font-family: "Limelight", sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.done-text {
+    font-family: "Limelight", sans-serif;
+    font-size: 20px;
+    color: #e0b30e;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.time-box {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.time-box span {
+    display: block;
+}
+
+.time-box .number {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.time-box .label {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+.fullscreen-img {
+    width: 100%;
+    object-fit: cover;
+    /* ให้ภาพเต็มพื้นที่โดยไม่เสียสัดส่วน */
+    object-position: center;
+    /* จัดตำแหน่งตรงกลาง */
+}
+
+.calendar-img {
+    width: 800px;
+    padding-top: 100px;
+    padding-bottom: 25px;
+    display: block;
+    /* แปลงจาก inline เป็น block ก่อน */
+    margin: 0 auto;
+    /* จัดให้ block อยู่กลางแนวนอน */
+}
+
+/* โซนนี้คือกล่องใหญ่ที่แบ่งซ้าย-ขวา */
+.venue-section {
+    min-height: 10vh;
+    /* สูงเต็มหน้าจอถ้าต้องการ */
+    display: flex;
+    align-items: center;
+    /* จัดให้เนื้อหาอยู่กลางแนวตั้ง */
+    justify-content: center;
+    /* จัดให้ทั้งบล็อกอยู่กลางหน้า */
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.venue-left {
+    flex: 1;
+    /* แบ่งพื้นที่ซ้ายขวาเท่า ๆ กัน */
+    text-align: right;
+    padding-right: 40px;
+    border-right: 2px solid #000;
+    /* เส้นแบ่งตรงกลาง */
+}
+
+.venue-right {
+    flex: 1;
+    padding-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.venue-name {
+    font-size: 32px;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+
+.venue-address {
+    font-family: "Fahkwang", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.map-wrapper {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 16 / 9;
+    /* รักษาสัดส่วนแผนที่ */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ========= Schedule section ========= */
+
+.schedule-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.schedule-heading {
+    margin-bottom: 20px;
+}
+
+.schedule-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.schedule-icon {
+    width: 100px;
+    height: 100px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.schedule-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-time {
+    padding-left: 10px;
+    font-family: "Limelight", sans-serif;
+    font-size: 20px;
+    color: #003049;
+    padding-top: 30px;
+}
+
+.schedule-detail {
+    font-family: "Fahkwang", sans-serif;
+    font-size: 18px;
+    color: #000000;
+    padding-left: 10px;
+}
+
+/* ====== Gallery แบบ masonry ====== */
+.gallery {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+
+    column-count: 4;
+    /* desktop แบ่ง 4 คอลัมน์ */
+    column-gap: 10px;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    /* ให้ภาพสูงตามสัดส่วนจริง 3:2 / 2:3 */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.03);
+}
+
+/* ====== Lightbox / Popup เต็มจอ ====== */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    /* top:0; right:0; bottom:0; left:0; */
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    /* เริ่มต้นซ่อน */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+/* .lightbox-img {
+      max-width: 100vw;
+      max-height: 100vh;
+      object-fit: contain;
+      ทำให้รูปทั้งแนวตั้ง/แนวนอนไม่บิดรูป
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    } */
+
+/* ปุ่มปิด */
+.lightbox-close {
+    position: fixed;
+    top: 16px;
+    right: 24px;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Limelight", sans-serif;
+    /* ใช้ฟอนต์เดียวกับงานคุณได้ */
+}
+
+/* ปุ่มเลื่อนไปก่อนหน้า/ถัดไป */
+.lightbox-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-family: "Limelight", sans-serif;
+    z-index: 10000;
+}
+
+.lightbox-prev {
+    left: 16px;
+}
+
+.lightbox-next {
+    right: 16px;
+}
+
+.lightbox-arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* ปรับ lightbox-img ให้ไม่ชนขอบบนมือถือและ desktop */
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+
+/* =========================
+    Mobile
+    ========================= */
+@media (max-width: 500px) {
+    h1 {
+        font-family: "Limelight", sans-serif;
+        font-size: 15px;
+        color: #003049;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    p {
+        font-family: "Limelight", sans-serif;
+        font-size: 15px;
+        color: #003049;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .youareinvited {
+        font-family: "Limelight", sans-serif;
+        font-size: 13px;
+        color: #003049;
+        text-align: center;
+    }
+
+    .orderofevents {
+        font-family: "Limelight", sans-serif;
+        font-size: 15px;
+        color: #003049;
+        text-align: center;
+    }
+
+    .dresscodedetail {
+        font-family: "Fahkwang", sans-serif;
+        font-size: 10px;
+        color: #e9b809;
+        text-align: center;
+        padding: 0px;
+        /* text-shadow: 1px 1px 2px #494949; */
+    }
+
+    .calendar-img {
+        width: 70%;
+        padding-top: 60px;
+        padding-bottom: 15px;
+        display: block;
+        /* แปลงจาก inline เป็น block ก่อน */
+        margin: 0 auto;
+        /* จัดให้ block อยู่กลางแนวนอน */
+    }
+
+    .venue-name {
+        font-size: 14px;
+        margin-bottom: 5px;
+        white-space: nowrap;
+    }
+
+    .venue-address {
+        font-family: "Fahkwang", sans-serif;
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .venue-left {
+        flex: 1;
+        text-align: right;
+        padding-right: 20px;
+        border-right: 2px solid #000;
+    }
+
+    .venue-right {
+        flex: 1;
+        padding-left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .countdown {
+        font-family: "Limelight", sans-serif;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .time-box .number {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .time-box .label {
+        font-size: 0.7rem;
+        opacity: 0.8;
+    }
+
+    .schedule-section {
+        margin: 24px auto;
+        padding: 0 16px;
+    }
+
+    .schedule-item {
+        margin-bottom: 12px;
+    }
+
+    .schedule-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+    }
+
+    .schedule-time {
+        font-size: 13px;
+        padding: 0px;
+    }
+
+    .schedule-detail {
+        font-size: 12px;
+        padding: 0px;
+    }
+
+    .gallery {
+        max-width: 100%;
+        padding: 0 8px;
+        margin: 24px auto;
+        column-count: 2;
+        /* บนมือถือเหลือ 2 คอลัมน์ */
+        column-gap: 6px;
+    }
+
+    .gallery-img {
+        width: 100%;
+        height: auto;
+        /* ย้ำอีกทีให้ไม่ล้นจอ */
+    }
+
+    .lightbox-close {
+        font-size: 28px;
+        top: 10px;
+        right: 16px;
+    }
+}
