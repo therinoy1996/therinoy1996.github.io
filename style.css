@@ -479,34 +479,96 @@ body {
 
 /* ซ่อนรูปที่ยังไม่อยากให้แสดง */
 .gallery-item.hidden {
-  display: none;
+    display: none;
 }
 
 /* ปุ่ม Load more */
 .load-more-btn {
-  margin: 16px auto 40px;
-  padding: 10px 24px;
-  border-radius: 24px;
-  border: 2px solid #003049;
-  background: #ffffff;
-  color: #003049;
-  font-family: "Limelight", sans-serif;
-  font-size: 16px;
-  cursor: pointer;
-  display: block;        /* ให้ปุ่มอยู่กลาง */
+    margin: 16px auto 40px;
+    padding: 10px 24px;
+    border-radius: 24px;
+    border: 2px solid #003049;
+    background: #ffffff;
+    color: #003049;
+    font-family: "Limelight", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    /* ให้ปุ่มอยู่กลาง */
 }
 
 /* hover แล้วสลับสีหน่อย */
 .load-more-btn:hover {
-  background: #003049;
-  color: #ffffff;
+    background: #003049;
+    color: #ffffff;
 }
 
 /* บนมือถือ */
 @media (max-width: 500px) {
-  .load-more-btn {
-    font-size: 14px;
-    padding: 8px 18px;
-    margin: 12px auto 24px;
-  }
+    .load-more-btn {
+        font-size: 14px;
+        padding: 8px 18px;
+        margin: 12px auto 24px;
+    }
+}
+
+/* .pinterest-button-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.pinterest-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #fff;
+    color: #e60023;
+    border-radius: 8px;
+    font-family: "Fahkwang", sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.pinterest-btn:hover {
+    color: #fff;
+    background-color: #b5001c;
+} */
+
+.pinterest-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.pinterest-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+
+    background: #ffffff;
+    border: 2px solid #e60023;
+    /* สีแดง Pinterest */
+    transition: 0.25s ease;
+}
+
+.pinterest-link:hover {
+    background: #e60023;
+    border-color: #e60023;
+}
+
+.pinterest-link:hover .pinterest-text {
+    color: #fff;
+}
+
+.pinterest-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.pinterest-text {
+    font-family: "Fahkwang", sans-serif;
+    font-size: 18px;
+    color: #e60023;
 }
