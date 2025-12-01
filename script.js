@@ -113,3 +113,37 @@ document.addEventListener("keydown", (e) => {
         showPrev();
     }
 });
+
+// ----- Load more images -----
+const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
+const loadMoreBtn = document.getElementById("loadMoreBtn");
+
+const batchSize = 15;      // จำนวนรูปต่อรอบ
+let currentVisible = 0;     // ตอนเริ่มยังไม่ได้นับ
+
+function updateGalleryVisibility() {
+    galleryItems.forEach((item, index) => {
+        if (index < currentVisible) {
+            item.classList.remove("hidden");
+        } else {
+            item.classList.add("hidden");
+        }
+    });
+
+    // ถ้าแสดงครบทุกภาพแล้ว -> ซ่อนปุ่ม
+    if (currentVisible >= galleryItems.length && loadMoreBtn) {
+        loadMoreBtn.style.display = "none";
+    }
+}
+
+// แสดงรูปชุดแรกตอนโหลดหน้า
+currentVisible = batchSize;
+updateGalleryVisibility();
+
+// เมื่อกดปุ่ม Load more -> เพิ่มจำนวนที่ให้เห็นทีละ 15
+if (loadMoreBtn) {
+    loadMoreBtn.addEventListener("click", () => {
+        currentVisible += batchSize;
+        updateGalleryVisibility();
+    });
+}
