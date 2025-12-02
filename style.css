@@ -510,6 +510,24 @@ body {
         padding: 8px 18px;
         margin: 12px auto 24px;
     }
+
+    .pinterest-text {
+        font-family: "Fahkwang", sans-serif;
+        font-size: 10px;
+        color: #e60023;
+    }
+
+    .pinterest-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 8px;
+        background: #ffffff;
+        border: 2px solid #e60023;
+        transition: 0.25s ease;
+    }
 }
 
 /* .pinterest-button-section {
